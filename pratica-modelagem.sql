@@ -61,7 +61,7 @@ CREATE TABLE "cities" (
 
 CREATE TABLE "customerAdressess" (
     "id" SERIAL PRIMARY KEY,
-    "customerId" INTEGER NOT NULL REFERENCES "customers"("id"),
+    "customerId" INTEGER UNIQUE NOT NULL REFERENCES "customers"("id"),
     "street" TEXT NOT NULL,
     "number" TEXT NOT NULL,
     "complement" TEXT,
